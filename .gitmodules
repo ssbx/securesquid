@@ -4,3 +4,6 @@
 [submodule "sources/squid"]
 	path = sources/squid
 	url = https://github.com/ssbx/squid.git
+[submodule "sources/c-icap"]
+	path = sources/c-icap
+	url = https://github.com/ssbx/c-icap.git
