@@ -9,16 +9,16 @@ function clean_all {
 }
 
 function print_help {
-    echo "generate.sh <local|system>"
+    echo "generate.sh <local|system|clean>"
     echo " Options:"
-    echo "      local build and test under local user"
-    echo "      system build and deploy on system"
+    echo "      local   build and test under local user"
+    echo "      system  build and deploy on system"
+    echo "      clean   clean all repos"
     echo ""
     exit
 }
 
 function local_build {
-    git submoudle update --init
     clean_all
     cd sources/clamav
     ./configure \
@@ -30,7 +30,6 @@ function local_build {
 }
 
 function system_build {
-    git submoudle update --init
     clean_all
     cd sources/clamav
     ./configure --prefix=/opt/clamav
@@ -43,6 +42,8 @@ if  [ "$#" -ne 1 ]; then
     print_help
 fi
 
+
+git submodule update --init
 
 if [ "$1" = "local" ]; then
     local_build
