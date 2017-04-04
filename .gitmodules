@@ -1,0 +1,3 @@
+[submodule "sources/clamav"]
+	path = sources/clamav
+	url = https://github.com/vrtadmin/clamav-devel.git
