@@ -1,3 +1,6 @@
 [submodule "sources/clamav"]
 	path = sources/clamav
 	url = https://github.com/vrtadmin/clamav-devel.git
+[submodule "sources/squid"]
+	path = sources/squid
+	url = https://github.com/ssbx/squid.git
